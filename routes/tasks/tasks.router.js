@@ -66,24 +66,6 @@ router.get("/:id", (req, res) => {
   }
 });
 
-// Get a task by id
-router.get("/:id", (req, res) => {
-  try {
-    const taskId = parseInt(req.params.id);
-    // Simulated DB call to get a single task by id
-    const taskData = getTask(taskId);
-    if (!taskData)
-      return res.status(404).send({ message: "No such task found!" });
-    res.status(200).send({ data: taskData });
-  } catch (error) {
-    // While no errors are expected in this use case,
-    // still it's good practice to wrap IO operations like
-    // database queries to catch any unexpected errors
-    console.error("Error in getTaskById --- ", error);
-    res.status(400).send({ message: "Something went wrong!" });
-  }
-});
-
 // Get tasks by priority
 router.get("/priority/:level", async (req, res) => {
   try {
