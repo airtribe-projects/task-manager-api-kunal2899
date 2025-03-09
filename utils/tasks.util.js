@@ -1,5 +1,6 @@
 const { difference } = require("lodash")
-
+const { randomUUID } = require('crypto');
+ 
 const requiredKeysWithType = {
   title: 'string',
   description: 'string',
@@ -19,7 +20,7 @@ const validateTaskBody = (taskBody, partial = false) => {
   if (!partial && missingKeys.length > 0) {
     return { isValid: false, reason: `Invalid payload: missing "${missingKeys.join(', ')}" key(s)!` }
   }
-  for (key of availableKeys) {
+  for (const key of availableKeys) {
     const type = requiredKeysWithType[key];
     if (typeof taskBody[key] !== type) {
       return { isValid: false, reason: `Invalid payload: "${key}" must be ${type}!` };
@@ -34,6 +35,9 @@ const validateTaskBody = (taskBody, partial = false) => {
   return { isValid: true };
 }
 
+const generateTaskUUID = () => `task-${randomUUID().split('-')[0]}`;
+
 module.exports = {
   validateTaskBody,
-}
+  generateTaskUUID,
+};

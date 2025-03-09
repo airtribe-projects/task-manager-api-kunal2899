@@ -1,6 +1,19 @@
 const fs = require("fs");
 const { tasks: tasksData } = require("../task.json");
 const { isEmpty, filter } = require("lodash");
+const { generateTaskUUID } = require("../utils/tasks.util");
+
+const updateTasksJsonData = async (updatedTasksData) => {
+  try {
+    await fs.promises.writeFile(
+      "./task.json",
+      JSON.stringify({ tasks: updatedTasksData }, null, 2)
+    );
+  } catch (e) {
+    console.error('Error in updateTasksJsonData --- ', e);
+    throw new Error('Fatal: Unable to update tasks data');
+  }
+}
 
 const getAllTasks = (filterData = {}, sortBy = null) => {
   const finalTasksData = [...(isEmpty(filterData) ? tasksData : filter(tasksData, filterData))];
@@ -21,16 +34,10 @@ const getTask = taskId => tasksData.find(task => task.id === taskId);
 
 const addTask = async (taskToCreate) => {
   const updatedTasksData = [...tasksData];
-  taskToCreate.id = tasksData.length + 1;
+  taskToCreate.id = generateTaskUUID();
   taskToCreate.createdAt = new Date().toISOString();
   updatedTasksData.push(taskToCreate);
-  await fs.promises.writeFile(
-    "./task.json",
-    JSON.stringify({ tasks: updatedTasksData }, null, 2),
-    (err) => {
-      if (err) throw new Error("Error in writing the file - ", err);
-    }
-  );
+  await updateTasksJsonData(updatedTasksData);
 };
 
 const updateTask = async (taskToUpdate) => {
@@ -38,24 +45,12 @@ const updateTask = async (taskToUpdate) => {
   const existingTaskData = getTask(taskId);
   if (!existingTaskData) throw new Error('No such task found to update!');
   Object.assign(existingTaskData, taskToUpdate);
-  await fs.promises.writeFile(
-    "./task.json",
-    JSON.stringify({ tasks: tasksData }, null, 2),
-    (err) => {
-      if (err) throw new Error("Error in writing the file - ", err);
-    }
-  );
+  await updateTasksJsonData(tasksData);
 }
 
 const deleteTask = async taskId => {
   const updatedTasksData = tasksData.filter(task => task.id !== taskId);
-  await fs.promises.writeFile(
-    "./task.json",
-    JSON.stringify({ tasks: updatedTasksData }, null, 2),
-    (err) => {
-      if (err) throw new Error("Error in writing the file - ", err);
-    }
-  );
+  await updateTasksJsonData(updatedTasksData);
 }
 
 module.exports = {
@@ -64,4 +59,5 @@ module.exports = {
   addTask,
   updateTask,
   deleteTask,
+  updateTasksJsonData,
 };

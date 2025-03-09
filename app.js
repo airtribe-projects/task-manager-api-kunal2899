@@ -1,8 +1,8 @@
 const express = require('express');
-require('dotenv').config({ path: './.env' });
-const app = express();
-
 const tasksRouter = require('./routes/tasks/tasks.router');
+
+require('dotenv').config();
+const app = express();
 
 const PORT = process.env.PORT || 3000;
 

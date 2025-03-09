@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const { getAllTasks, addTask, updateTask, getTask, deleteTask } = require("../../db/dbController");
-const { validateTaskBody } = require("./util");
+const { validateTaskBody } = require("../../utils/tasks.util");
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
@@ -51,7 +51,7 @@ router.get("/", (req, res) => {
 // Get a task by id
 router.get("/:id", (req, res) => {
   try {
-    const taskId = parseInt(req.params.id);
+    const taskId = req.params.id
     // Simulated DB call to get a single task by id
     const taskData = getTask(taskId);
     if (!taskData)
@@ -87,7 +87,7 @@ router.get("/priority/:level", async (req, res) => {
 // Update a task
 router.put("/:id", async (req, res) => {
   try {
-    const taskId = parseInt(req.params.id);
+    const taskId = req.params.id;
     const taskDataToUpdate = req.body;
     const existingTaskData = getTask(taskId);
     if (!existingTaskData)
@@ -114,7 +114,7 @@ router.put("/:id", async (req, res) => {
 // Delete a task
 router.delete("/:id", async (req, res) => {
   try {
-    const taskId = parseInt(req.params.id);
+    const taskId = req.params.id;
     const existingTaskData = getTask(taskId);
     if (!existingTaskData)
       return res.status(404).send({ message: "No such task found!" });
