@@ -1,94 +1,236 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "title": "Set up environment",
-      "description": "Install Node.js, npm, and git",
-      "completed": true
+      "id": "task-94da8633",
+      "title": "Create a new repo",
+      "description": "Create a new github repository",
+      "completed": true,
+      "createdAt": "2025-02-28T14:22:14Z",
+      "priority": "high"
     },
     {
-      "id": 2,
+      "id": "task-a329e80e",
       "title": "Create a new project",
       "description": "Create a new project using the Express application generator",
-      "completed": true
+      "completed": true,
+      "createdAt": "2025-03-01T14:22:14Z",
+      "priority": "high"
     },
     {
-      "id": 3,
-      "title": "Install nodemon",
-      "description": "Install nodemon as a development dependency",
-      "completed": true
+      "id": "task-86290d2c",
+      "title": "Updated Task",
+      "description": "Updated Task Description",
+      "completed": true,
+      "createdAt": "2025-03-06T18:00:30Z",
+      "priority": "low"
     },
     {
-      "id": 4,
+      "id": "task-eef3740a",
       "title": "Install Express",
       "description": "Install Express",
-      "completed": false
+      "completed": false,
+      "createdAt": "2025-02-23T13:32:07Z",
+      "priority": "high"
     },
     {
-      "id": 5,
+      "id": "task-8eeaf433",
       "title": "Install Mongoose",
       "description": "Install Mongoose",
-      "completed": false
+      "completed": false,
+      "createdAt": "2025-02-27T19:41:29Z",
+      "priority": "medium"
     },
     {
-      "id": 6,
+      "id": "task-e37e0786",
       "title": "Install Morgan",
       "description": "Install Morgan",
-      "completed": false
+      "completed": false,
+      "createdAt": "2025-03-02T11:55:37Z",
+      "priority": "low"
     },
     {
-      "id": 7,
+      "id": "task-35cc4ac0",
       "title": "Install body-parser",
       "description": "Install body-parser",
-      "completed": false
+      "completed": false,
+      "createdAt": "2025-02-28T08:30:05Z",
+      "priority": "medium"
     },
     {
-      "id": 8,
+      "id": "task-0c16403b",
       "title": "Install cors",
       "description": "Install cors",
-      "completed": false
+      "completed": false,
+      "createdAt": "2025-03-09T12:34:56Z",
+      "priority": "high"
     },
     {
-      "id": 9,
+      "id": "task-7abb5dc2",
       "title": "Install passport",
       "description": "Install passport",
-      "completed": false
+      "completed": false,
+      "createdAt": "2025-03-04T10:02:18Z",
+      "priority": "medium"
     },
     {
-      "id": 10,
+      "id": "task-a5570fb7",
       "title": "Install passport-local",
       "description": "Install passport-local",
-      "completed": false
+      "completed": false,
+      "createdAt": "2025-02-24T09:46:24Z",
+      "priority": "low"
     },
     {
-      "id": 11,
+      "id": "task-168bc363",
       "title": "Install passport-local-mongoose",
       "description": "Install passport-local-mongoose",
-      "completed": false
+      "completed": false,
+      "createdAt": "2025-02-22T10:21:53Z",
+      "priority": "medium"
     },
     {
-      "id": 12,
+      "id": "task-3a9d0279",
       "title": "Install express-session",
       "description": "Install express-session",
-      "completed": false
+      "completed": false,
+      "createdAt": "2025-02-26T12:11:52Z",
+      "priority": "low"
     },
     {
-      "id": 13,
+      "id": "task-9e8beb99",
       "title": "Install connect-mongo",
       "description": "Install connect-mongo",
-      "completed": false
+      "completed": false,
+      "createdAt": "2025-03-03T17:47:53Z",
+      "priority": "high"
     },
     {
-      "id": 14,
+      "id": "task-83f38979",
       "title": "Install dotenv",
       "description": "Install dotenv",
-      "completed": false
+      "completed": false,
+      "createdAt": "2025-03-07T09:05:45Z",
+      "priority": "medium"
     },
     {
-      "id": 15,
+      "id": "task-17a127b5",
       "title": "Install jsonwebtoken",
       "description": "Install jsonwebtoken",
-      "completed": false
+      "completed": false,
+      "createdAt": "2025-02-29T16:57:36Z",
+      "priority": "high"
+    },
+    {
+      "id": "task-77bd1a31",
+      "title": "Complete roadmap",
+      "description": "Craft a new data using the Datapro",
+      "completed": true,
+      "createdAt": "2025-02-20T13:10:25Z",
+      "priority": "high"
+    },
+    {
+      "title": "Craft a new data stream",
+      "description": "Craft a new data using the Datapro",
+      "completed": false,
+      "priority": "medium",
+      "id": "task-19f9edb0",
+      "createdAt": "2025-03-08T21:56:09.550Z"
+    },
+    {
+      "title": "Craft a new data stream",
+      "description": "Craft a new data using the Datapro",
+      "completed": false,
+      "priority": "low",
+      "id": "task-545ce170",
+      "createdAt": "2025-03-08T22:09:56.879Z"
+    },
+    {
+      "title": "New Task",
+      "description": "New Task Description",
+      "completed": false,
+      "priority": "low",
+      "id": "task-c713b97a",
+      "createdAt": "2025-03-08T22:13:38.912Z"
+    },
+    {
+      "title": "New Task",
+      "description": "New Task Description",
+      "completed": false,
+      "priority": "low",
+      "id": "task-ff69a2c0",
+      "createdAt": "2025-03-08T22:15:45.618Z"
+    },
+    {
+      "title": "New Task",
+      "description": "New Task Description",
+      "completed": false,
+      "priority": "low",
+      "id": "task-5abf6f5e",
+      "createdAt": "2025-03-08T22:20:39.565Z"
+    },
+    {
+      "title": "New Task",
+      "description": "New Task Description",
+      "completed": false,
+      "priority": "low",
+      "id": "task-67ae6244",
+      "createdAt": "2025-03-08T22:22:33.779Z"
+    },
+    {
+      "title": "New Task",
+      "description": "New Task Description",
+      "completed": false,
+      "priority": "low",
+      "id": "task-6a2c2180",
+      "createdAt": "2025-03-08T22:23:17.906Z"
+    },
+    {
+      "title": "Deploy your applcation",
+      "description": "Deploy it on AWS",
+      "completed": false,
+      "priority": "medium",
+      "id": "task-ec8cad43",
+      "createdAt": "2025-03-09T08:03:30.366Z"
+    },
+    {
+      "title": "Deploy your applcation",
+      "description": "Deploy it on AWS",
+      "completed": false,
+      "priority": "medium",
+      "id": "task-67fe0df4",
+      "createdAt": "2025-03-09T08:06:00.419Z"
+    },
+    {
+      "title": "Deploy your applcation",
+      "description": "Deploy it on AWS",
+      "completed": false,
+      "priority": "medium",
+      "id": "task-ff91a0da",
+      "createdAt": "2025-03-09T08:06:05.450Z"
+    },
+    {
+      "title": "New Task",
+      "description": "New Task Description",
+      "completed": false,
+      "priority": "low",
+      "id": "task-a748a373",
+      "createdAt": "2025-03-09T08:33:17.816Z"
+    },
+    {
+      "title": "New Task",
+      "description": "New Task Description",
+      "completed": false,
+      "priority": "low",
+      "id": "task-ea4e9ac4",
+      "createdAt": "2025-03-09T08:35:21.923Z"
+    },
+    {
+      "title": "New Task",
+      "description": "New Task Description",
+      "completed": false,
+      "priority": "low",
+      "id": "task-0e20e14b",
+      "createdAt": "2025-03-09T08:37:47.064Z"
     }
   ]
 }
